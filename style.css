@@ -59,6 +59,11 @@ footer {
 .sign svg path {
     fill: white
 }
+.icon-large {
+  width: 100px;  /* or any size you want */
+  height: auto;
+  fill: currentColor;  /* optional: makes it inherit text color */
+}
 
 * {
     box-sizing: border-box;
@@ -468,8 +473,7 @@ noscript {
     position: relative
 }
 
-.activeThistab:before,
-.face {
+.activeThistab:before{
     content: "";
     position: absolute
 }
@@ -477,38 +481,6 @@ noscript {
 .logo-top img {
     height: 100%;
     z-index: 2
-}
-
-.face {
-    height: 74%;
-    bottom: 0;
-    justify-content: center;
-    gap: 5px;
-    z-index: 1;
-    padding-left: 1px
-}
-
-.eye {
-    width: 8px;
-    height: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff
-}
-
-.left-eye {
-    box-shadow: -1px -2px 2px rgba(0, 0, 0, .589) inset
-}
-
-.right-eye {
-    box-shadow: 1px 3px 2px rgba(0, 0, 0, .589) inset
-}
-
-.pupil {
-    width: 3.5px;
-    height: 3.5px;
-    background: #241010
 }
 
 .logo:hover {
@@ -689,6 +661,7 @@ noscript {
     display: flex;
     margin: 0 12px 0 0
 }
+
 .hero-logo {
   object-fit: cover;
   width: 300px;
@@ -882,8 +855,9 @@ noscript {
 }
 
 .resume-btn .sign {
-    width: 30%;
+    width: 40%;
     padding-left: 20px;
+    padding-right: 5px;
     transition-duration: 0.3s;
 }
 
