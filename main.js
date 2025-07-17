@@ -111,23 +111,5 @@ function openWindow(url) {
 
 function hireMe() {
   const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${myEmail}&su=${subject}&body=${body}`;
-  const outlookURL = `https://outlook.office.com/mail/deeplink/compose?to=${myEmail}&subject=${subject}&body=${body}`;
-  const yahooURL = `https://compose.mail.yahoo.com/?to=${myEmail}&subject=${subject}&body=${body}`;
-  const mailtoURL = `mailto:${myEmail}?subject=${subject}&body=${body}`;
-
-  // Try Gmail
-  if (openWindow(gmailURL)) return;
-
-  // Try Outlook
-  setTimeout(() => {
-    if (openWindow(outlookURL)) return;
-
-    // Try Yahoo
-    setTimeout(() => {
-      if (openWindow(yahooURL)) return;
-
-      // Fallback to mailto
-      window.location.href = mailtoURL;
-    }, 800);
-  }, 800);
+  openWindow(gmailURL);
 }
